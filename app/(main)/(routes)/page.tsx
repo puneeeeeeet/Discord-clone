@@ -1,10 +1,11 @@
-import { Button } from "@/components/ui/button"
-import { DESTRUCTION } from "dns"
-import { Ghost } from "lucide-react"
+import { UserButton } from "@clerk/nextjs"
+import { ModeToggle } from "@/components/mode-toggle"
+
 export default function Home() {
   return (
     <div className="">
-      This is a protected route
+      <UserButton afterSignOutUrl="/"/>
+     <ModeToggle />
     </div>  
   )
 }
